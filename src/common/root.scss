@@ -1,0 +1,68 @@
+$bg: 1340px;
+$lg: 1140px;
+$md: 992px;
+$sm: 768px;
+$xs: 576px;
+$gutter: 15px;
+
+@mixin media($size: $lg) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin container($padding: $gutter) {
+    max-width: $bg;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $padding;
+    padding-right: $padding;
+
+    @include media() {
+        max-width: $lg;
+    }
+
+    @include media($lg) {
+        max-width: $md;
+    }
+
+    @include media($md) {
+        max-width: $sm;
+    }
+
+    @include media($sm) {
+        max-width: $xs;
+    }
+}
+
+$fonts: ('RFDewi', 'Regular', 400, 'normal'),
+('RFDewi', 'Light', 300, 'normal'),
+('RFDewi', 'Semibold', 600, 'normal'),
+('RFDewi', 'BlackItalic', 900, 'italic'),
+('RFDewi', 'Ultrabold', 800, 'normal'),
+('RFDewi', 'Bold', 700, 'normal'),
+('NeueMachina', 'Bold', 700, 'normal'),
+('NeueMachina', 'Light', 300, 'normal'),
+('NeueMachina', 'Ultrabold', 800, 'normal'),
+('fontawesome', 'light', 300, 'normal');
+
+@each $family,
+$name,
+$weight,
+$style in $fonts {
+    @font-face {
+        font-family: $family;
+        src: url(fonts/#{$family}/#{$family}-#{$name}.ttf);
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+$font-RFDewi: 'RFDewi';
+$font-Neue: 'NeueMachina';
+$font-aw: 'fontawesome';
+
+$body: #fff;
+$color: #000;
+$header-bg: #000;

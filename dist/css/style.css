@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url(../fonts/PlayfairDisplay-Regular.ttf);
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url(../fonts/PlayfairDisplay-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: "PostNoBillsJaffna";
+    src: url(../fonts/PostNoBillsJaffna-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: "PTSans";
+    src: url(../fonts/PTSans-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: "PTSans";
+    src: url(../fonts/PTSans-Regular.ttf);
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "fontawesome";
+    src: url(../fonts/fontawesome-light.ttf);
+    font-weight: 300
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+ul {
+    list-style: none
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+@media(max-width: 1140px) {
+    .container {
+        max-width: 992px
+    }
+}
+
+@media(max-width: 992px) {
+    .container {
+        max-width: 768px
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        max-width: 576px
+    }
+}

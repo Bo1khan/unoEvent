@@ -1,0 +1,44 @@
+.nav {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 35px 25px;
+
+   .logo {
+      object-fit: cover;
+
+      &__img {
+         max-width: 207px;
+         width: 100%;
+      }
+   }
+
+   .menu {
+      display: flex;
+
+      &__link {
+         font-size: 14px;
+         font-weight: 600px;
+         margin: 0 23px;
+         text-transform: uppercase;
+         text-align: center;
+         letter-spacing: 0.05em;
+      }
+   }
+
+   .contacts {
+      font-family: $font-Neue;
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+
+
+      &__link {
+         text-transform: uppercase;
+         line-height: 100%;
+         font-weight: 700;
+         font-size: 30px;
+         margin-bottom: 5px;
+      }
+   }
+}

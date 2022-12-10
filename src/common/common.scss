@@ -28,15 +28,10 @@ body {
 }
 
 .icon {
-    &-enter::before {
-        content: '\f090';
-        font-size: 16px;
-        margin-right: 12px;
-
-        @include media($sm) {
-            margin-right: 0;
-            font-size: 17px;
-        }
+    &-phone::before {
+        content: '\f095';
+        font-size: 24px;
+        font-weight: 900;
     }
 
     &-shop::before {

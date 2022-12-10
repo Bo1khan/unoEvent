@@ -5,6 +5,14 @@
    position: relative;
    display: flex;
 
+   @include media($sm) {
+      height: 100vh;
+   }
+
+   @include media($xs) {
+      height: 852px;
+   }
+
    .container {
       display: flex;
       flex-direction: column;
@@ -19,36 +27,72 @@
    .a20x20 {
       left: 4.24%;
       top: 23.8%;
+
+      @include media($md) {
+         width: 10px;
+         height: 10px;
+      }
    }
 
    .b121x108 {
       left: 27.08%;
       top: 13%;
+
+      @include media($md) {
+         width: 85px;
+         height: 76px;
+      }
    }
 
    .c20x20center {
       left: 53.12%;
       top: 25.75%;
+
+      @include media($md) {
+         width: 10px;
+         height: 10px;
+      }
    }
 
    .d29x26 {
       right: 3.89%;
       top: 60.99%;
+
+      @include media($md) {
+         width: 20px;
+         height: 18px;
+      }
    }
 
    .e79x75 {
       right: 29.82%;
       top: 8.09%;
+
+      @include media($md) {
+         width: 55px;
+         height: 52px;
+      }
    }
 
    .f111x89 {
       left: 11.75%;
       top: 73.34%;
+
+      @include media($md) {
+         width: 78px;
+         height: 62px;
+      }
    }
 
    .g82x102f {
       right: 16.18%;
       top: 71.1%;
+
+      @include media($md) {
+         width: 57px;
+         height: 71px;
+         top: 75%;
+      }
    }
 
 
@@ -57,12 +101,70 @@
       text-align: center;
    }
 
+   .mobile1,
+   .mobile2 {
+      display: none;
+
+      @include media($xs) {
+         display: flex;
+      }
+   }
+
+   .mobile1 {
+      max-width: 180px;
+      position: absolute;
+      top: 35%;
+      right: 5%;
+
+      .key {
+         margin-right: -10px;
+      }
+
+      @include media(520px) {
+         top: 35%;
+      }
+
+      @include media(463px) {
+         top: 47%;
+      }
+   }
+
+   .mobile2 {
+      transform: none;
+      margin-top: 20px;
+      max-width: 300px;
+   }
+
    &__bg {
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
       min-height: 242px;
+
+      @include media(1330px) {
+         min-height: 200px;
+      }
+
+      @include media($lg) {
+         min-height: 160px;
+      }
+
+      @include media($md) {
+         min-height: 130px;
+      }
+
+      @include media($sm) {
+         min-height: 335px;
+      }
+
+      @include media(520px) {
+         min-height: 60%;
+      }
+
+      @include media(463px) {
+         min-height: 67%;
+      }
    }
 
    &__title {
@@ -74,21 +176,80 @@
       text-transform: uppercase;
       background: #000;
       mix-blend-mode: multiply;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @include media(1330px) {
+         font-size: 180px;
+      }
+
+      @include media($lg) {
+         font-size: 150px;
+      }
+
+      @include media($md) {
+         font-size: 114px;
+         word-wrap: break-word;
+      }
+
+      @include media($sm) {
+         font-size: 140px;
+         display: block;
+      }
+
+      @include media(520px) {
+         font-size: 123px;
+         text-align: left;
+      }
    }
 
    &__subtitle {
+      position: relative;
       font-weight: 700;
       font-size: 40px;
       z-index: 9;
       background: $body;
       color: $color;
-      border-radius: 25px;
-      padding: 0 18px 5px;
       max-width: 718px;
       width: 100%;
-      text-align: center;
-      transform: rotate(5deg);
+      border-radius: 25px;
       margin: -25px auto 0;
+      transform: rotate(5deg);
+      padding: 0 18px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .key {
+         margin: 0 10px -10px;
+         transform: rotate(-2deg);
+      }
+
+      @include media($lg) {
+         font-size: 36px;
+         max-width: 650px;
+      }
+
+      @include media($md) {
+         font-size: 28px;
+         max-width: 500px;
+
+         .key {
+            width: 30px;
+            height: 30px;
+            margin-bottom: -5px;
+         }
+      }
+
+      @include media($sm) {
+         font-size: 26px;
+         max-width: 450px;
+      }
+
+      @include media($xs) {
+         display: none;
+      }
    }
 
    &__desc {
@@ -99,6 +260,15 @@
       width: 100%;
       display: inline-block;
       margin-top: 85px;
+
+      @include media($lg) {
+         margin-top: 50px;
+         font-size: 20px;
+      }
+
+      @include media($sm) {
+         font-size: 18px;
+      }
    }
 
    &__icon {
@@ -111,5 +281,10 @@
       padding: 10px;
       width: 16px;
       height: 16px;
+
+      @include media($sm) {
+         margin-bottom: 30px;
+         margin-top: 20px;
+      }
    }
 }

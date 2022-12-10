@@ -11,8 +11,16 @@ header.header
       .header__content
          img.header__bg(src=require("../../images/header_title-bg.jpg"), alt="")
          h1.header__title праздники
-         h3.header__subtitle под ключ на наших площадках
-         p.header__desc Мы сформировали пакетные предложения для самых востребованных типов мероприятий, чтобы вы сэкономили время и силы! 
+         h4.header__subtitle под ключ  
+            img.key(src=require("../../images/key.png"), alt="")
+            | на наших площадках
+         h4.header__subtitle.mobile1 под ключ  
+            img.key(src=require("../../images/key.png"), alt="")
+         h4.header__subtitle.mobile2 на наших площадках
+         p.header__desc 
+            | Мы сформировали пакетные предложения
+            br
+            | для самых востребованных типов мероприятий,
+            br
+            | чтобы вы сэкономили время и силы! 
       img.header__icon(src=require("../../images/svg/arrow.svg"), alt="")
-
-main.main

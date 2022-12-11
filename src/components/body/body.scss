@@ -78,25 +78,29 @@
       width: 100%;
       padding: 42px;
       border-radius: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       margin: 0 auto;
       margin-bottom: 40px;
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
 
       @include media(1300px) {
          width: 90%;
       }
 
       @include media($md) {
-         flex-direction: column-reverse;
-         justify-content: center;
+         padding: 25px;
       }
 
-      @include media($md) {
-         padding: 25px;
+      &__wrapper {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+
+         @include media($md) {
+            flex-direction: column-reverse;
+            justify-content: center;
+         }
       }
 
       &__content {
@@ -164,9 +168,127 @@
          width: 100%;
          font-size: 16px;
          font-weight: 600;
-         display: flex;
-         justify-content: space-between;
          border: none;
+
+         &.active {
+            opacity: 0.9;
+         }
+
+         .icon-showdown {
+            margin-left: 10px;
+         }
+      }
+
+      .packets {
+         width: 100%;
+         padding: 42px 0 10px;
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 25px;
+
+      }
+
+      .packet {
+         background: $packet-bg;
+         border: 1px solid #AAAAF9;
+         border-radius: 30px;
+         padding: 30px 35px 35px 40px;
+
+         &__title {
+            font-weight: 800;
+            font-size: 35px;
+            line-height: 100%;
+            margin-bottom: 10px;
+         }
+
+         &__price {
+            font-weight: 800;
+            font-size: 25px;
+            display: inline-block;
+            padding: 2px 23px;
+            margin-bottom: 10px;
+            background: $body;
+         }
+
+         &__desc {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 15px;
+         }
+
+         &__content {
+            min-height: 392px;
+         }
+
+         &__subtitle {
+            font-weight: 800;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+         }
+
+         &__list {
+            list-style: disc;
+
+            li {
+               font-weight: 400;
+               font-size: 14px;
+               line-height: 100%;
+               margin-left: 20px;
+            }
+         }
+      }
+
+      .decor,
+      .services,
+      .foods {
+         text-align: left;
+         margin-bottom: 32px;
+      }
+   }
+
+   .packet__icon {
+      display: inline-block;
+      padding: 3px;
+      background: #AAAAF9;
+      border-radius: 50%;
+   }
+
+   .more {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 100%;
+      text-decoration: underline;
+      margin-top: 15px;
+      text-align: left;
+   }
+
+   .order {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+
+      &__btn {
+         padding: 18px 25px 20px;
+         font-weight: 600;
+         font-size: 16px;
+         text-align: center;
+         background: $body;
+         border: 1px solid rgba(0, 0, 0, 0.2);
+         border-radius: 100px;
+      }
+
+      &__pdf {
+         width: 58px;
+         height: 58px;
+         background: $body;
+         border: 1px solid rgba(0, 0, 0, 0.2);
+         border-radius: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding-left: 2px;
       }
    }
 

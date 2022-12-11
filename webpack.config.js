@@ -6,9 +6,12 @@ const sortCSSmq = require('sort-css-media-queries');
 module.exports = (env, argv) => {
     console.log(argv.mode);
     const config = {
-        entry: './src/index.js',
+        entry: {
+            jquery: './src/jquery-3.6.0.min.js',
+            script: './src/index.js'
+        },
         output: {
-            filename: 'js/script.js',
+            filename: 'js/[name].js',
             clean: true,
         },
         // mode: 'development', // 'production', // 'development', //
@@ -22,60 +25,60 @@ module.exports = (env, argv) => {
         ],
         module: {
             rules: [{
-                    test: /\.pug$/,
-                    use: 'pug-loader'
-                },
-                {
-                    test: /\.s?css$/,
-                    use: [
-                        argv.mode == 'production' ? MiniCssExtractPlugin.loader : {
-                            loader: "style-loader"
-                        },
-                        {
-                            loader: "css-loader",
-                            options: {
-                                sourceMap: true
-                            }
-                        },
-                        {
-                            loader: "postcss-loader",
-                            options: {
-                                sourceMap: true
-                            }
-                        },
-                        {
-                            loader: "sass-loader",
-                            options: {
-                                sourceMap: true
-                            }
-                        },
-                    ]
-                },
-                {
-                    test: /\.js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    use: {
-                        loader: 'babel-loader',
+                test: /\.pug$/,
+                use: 'pug-loader'
+            },
+            {
+                test: /\.s?css$/,
+                use: [
+                    argv.mode == 'production' ? MiniCssExtractPlugin.loader : {
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader",
                         options: {
-                            presets: ['@babel/preset-env'],
-                            plugins: ['@babel/plugin-proposal-object-rest-spread']
+                            sourceMap: true
                         }
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                ]
+            },
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/plugin-proposal-object-rest-spread']
                     }
-                },
-                {
-                    test: /\.(png|jpg|jpeg|gif|svg)/,
-                    type: argv.mode == 'production' ? 'asset/resource' : 'asset/inline',
-                    generator: argv.mode == 'production' ? {
-                        filename: 'img/[name]-[hash][ext]'
-                    } : {}
-                },
-                {
-                    test: /\.(ttf|woff|woff2|otf|eot|svg)/,
-                    type: 'asset/resource',
-                    generator: {
-                        filename: 'fonts/[name][ext]'
-                    }
-                },
+                }
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)/,
+                type: argv.mode == 'production' ? 'asset/resource' : 'asset/inline',
+                generator: argv.mode == 'production' ? {
+                    filename: 'img/[name]-[hash][ext]'
+                } : {}
+            },
+            {
+                test: /\.(ttf|woff|woff2|otf|eot|svg)/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext]'
+                }
+            },
             ],
         },
         optimization: {

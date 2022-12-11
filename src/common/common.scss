@@ -50,6 +50,13 @@ button {
         font-weight: 900;
     }
 
+    &-showup::before {
+        content: '\f077';
+        font-size: 14px;
+        font-weight: 900;
+        margin-left: 10px;
+    }
+
     &-next::before {
         content: '\f054';
         font-size: 27px;
@@ -60,6 +67,13 @@ button {
     &-prev::before {
         content: '\f053';
         font-size: 30px;
+        font-weight: 400;
+        color: $body;
+    }
+
+    &-plus::before {
+        content: '\f067';
+        font-size: 10px;
         font-weight: 400;
         color: $body;
     }

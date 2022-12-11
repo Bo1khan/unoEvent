@@ -19,6 +19,10 @@ body {
     color: $color;
 }
 
+button {
+    cursor: pointer
+}
+
 .container {
     @include container;
 }
@@ -34,13 +38,65 @@ body {
         font-weight: 900;
     }
 
-    &-shop::before {
-        content: '\f07a';
-        font-size: 17px;
+    &-user::before {
+        content: '\f406';
+        font-size: 20px;
+        font-weight: 900;
     }
 
-    &-search::before {
-        content: '\f002';
-        font-size: 17px;
+    &-showdown::before {
+        content: '\f078';
+        font-size: 14px;
+        font-weight: 900;
+    }
+
+    &-next::before {
+        content: '\f054';
+        font-size: 27px;
+        font-weight: 400;
+        color: $body;
+    }
+
+    &-prev::before {
+        content: '\f053';
+        font-size: 30px;
+        font-weight: 400;
+        color: $body;
+    }
+
+    &-vk::before {
+        content: '\f189';
+        font-size: 24px;
+        font-weight: 400;
+        color: $body;
+    }
+
+    &-facebook::before {
+        content: '\f39e';
+        font-size: 24px;
+        font-weight: 400;
+        color: $body;
+    }
+
+    &-instagram::before {
+        content: '\f16d';
+        font-size: 24px;
+        font-weight: 400;
+        color: $body;
+    }
+}
+
+.logo {
+    object-fit: cover;
+
+    &__img {
+        max-width: 207px;
+        width: 100%;
+        position: relative;
+        z-index: 99;
+
+        @include media($lg) {
+            max-width: 160px;
+        }
     }
 }

@@ -41,21 +41,6 @@
       padding: 20px 0;
    }
 
-   .logo {
-      object-fit: cover;
-
-      &__img {
-         max-width: 207px;
-         width: 100%;
-         position: relative;
-         z-index: 99;
-
-         @include media($lg) {
-            max-width: 160px;
-         }
-      }
-   }
-
    .menu {
       display: flex;
 

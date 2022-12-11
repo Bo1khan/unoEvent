@@ -46,7 +46,9 @@ $fonts: ('RFDewi', 'Regular', 400, 'normal'),
 ('NeueMachina', 'Light', 300, 'normal'),
 ('NeueMachina', 'Ultrabold', 800, 'normal'),
 ('fontawesome', 'solid', 900, 'normal'),
-('fontawesome', 'light', 300, 'normal');
+('fontawesome', 'regular', 400, 'normal'),
+('fontawesome', 'light', 300, 'normal'),
+('fontawesome', 'brands', 400, 'normal');
 
 @each $family,
 $name,
@@ -67,3 +69,4 @@ $font-aw: 'fontawesome';
 $body: #fff;
 $color: #000;
 $header-bg: #000;
+$footer-desc: #9C9C9C;

@@ -2,6 +2,15 @@
    text-align: center;
    padding-bottom: 173px;
 
+   @include media($md) {
+      padding-bottom: 100px;
+   }
+
+   @include media($xs) {
+      padding-bottom: 50px;
+   }
+
+
    &__title {
       max-width: 479px;
       width: 100%;
@@ -10,11 +19,20 @@
       font-size: 42px;
       line-height: 120%;
       text-transform: uppercase;
-      margin-top: 180px;
+      margin-top: 140px;
 
       span {
          font-weight: 900;
          font-style: italic;
+      }
+
+      @include media($md) {
+         font-size: 36px;
+         margin-top: 80px;
+      }
+
+      @include media($xs) {
+         font-size: 33px;
       }
    }
 
@@ -25,5 +43,181 @@
       font-size: 22px;
       letter-spacing: 0.01em;
       margin-top: 33px;
+
+      @include media($md) {
+         font-size: 18px;
+         max-width: 500px;
+      }
+
+      @include media($xs) {
+         max-width: 300px;
+      }
+   }
+
+   .cards {
+      margin-top: 40px;
+   }
+
+   .first {
+      background: url(./images/slide1-bg.jpg);
+   }
+
+   .second {
+      background: url(./images/slide2-bg.jpg);
+   }
+
+   .third {
+      background: url(./images/slide3-bg.jpg);
+   }
+
+   .fourth {
+      background: url(./images/slide4-bg.jpg);
+   }
+
+   .card {
+      width: 100%;
+      padding: 42px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include media(1300px) {
+         width: 90%;
+      }
+
+      @include media($md) {
+         flex-direction: column-reverse;
+         justify-content: center;
+      }
+
+      @include media($md) {
+         padding: 25px;
+      }
+
+      &__content {
+         text-align: left;
+         margin-left: 70px;
+         max-width: 334px;
+         width: 100%;
+
+         @include media($lg) {
+            margin-left: 0;
+         }
+
+         @include media($md) {
+            max-width: 240px;
+         }
+      }
+
+      &__title {
+         max-width: 334px;
+         width: 100%;
+         font-weight: 800;
+         font-size: 42px;
+         line-height: 120%;
+         margin-bottom: 2px;
+         text-transform: uppercase;
+
+         @include media($lg) {
+            font-size: 36px;
+         }
+
+         @include media($md) {
+            margin-top: 30px;
+         }
+
+         @include media($xs) {
+            font-size: 30px;
+         }
+      }
+
+      &__price {
+         font-weight: 300;
+         font-size: 40px;
+         margin-bottom: 25px;
+         display: flex;
+         align-items: center;
+
+         .icon-user {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+            margin-bottom: -5px;
+         }
+
+         @include media($md) {
+            font-size: 30px;
+            margin-top: 15px;
+         }
+      }
+
+      &__btn {
+         border-radius: 100px;
+         text-align: center;
+         padding: 18px 20px 20px;
+         max-width: 226px;
+         width: 100%;
+         font-size: 16px;
+         font-weight: 600;
+         display: flex;
+         justify-content: space-between;
+         border: none;
+      }
+   }
+
+   .slider {
+      position: relative;
+
+      &__inner {
+         max-width: 638px;
+         width: 100%;
+         display: flex;
+         overflow: hidden;
+
+         @include media(1300px) {
+            max-width: 500px;
+         }
+      }
+
+      &__img {
+         max-width: 638px;
+         width: 100%;
+         object-fit: cover;
+         object-position: center;
+         border-radius: 30px;
+
+         @include media(1300px) {
+            max-width: 500px;
+         }
+
+         @include media($xs) {
+            min-height: 205px;
+         }
+      }
+
+      .prev,
+      .next {
+         background: none;
+         border: none;
+         position: absolute;
+         top: 161px;
+
+         @include media(1300px) {
+            top: 45%;
+         }
+      }
+
+      .prev {
+         left: 30px;
+      }
+
+      .next {
+         right: 30px;
+      }
    }
 }

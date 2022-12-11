@@ -1,0 +1,99 @@
+.footer {
+   background: $color;
+   color: $body;
+   padding: 110px 50px;
+
+   @include media($lg) {
+      padding: 110px 0;
+   }
+
+   @include media($md) {
+      padding: 70px 0;
+   }
+
+   @include media($md) {
+      padding: 60px 0 50px;
+   }
+
+   &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+
+      @include media($xs) {
+         flex-direction: column;
+      }
+
+      .contacts {
+         font-family: $font-Neue;
+         display: flex;
+         flex-direction: column;
+         text-align: right;
+         transition: 0.5s;
+
+         @include media($xs) {
+            margin-top: 56px;
+         }
+
+         &__link {
+            text-transform: uppercase;
+            line-height: 100%;
+            font-weight: 700;
+            font-size: 30px;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 99;
+
+            :hover {
+               color: #F86AE0;
+            }
+
+            @include media($lg) {
+               font-size: 24px;
+            }
+
+            @include media($md) {
+               font-size: 20px;
+            }
+         }
+      }
+   }
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include media($xs) {
+         flex-direction: column-reverse;
+      }
+
+      .social-media {
+         color: $body;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 115px;
+
+         @include media($xs) {
+            margin-top: 20px;
+         }
+      }
+   }
+
+   &__desc {
+      font-size: 16px;
+      line-height: 135%;
+      color: $footer-desc;
+
+      a {
+         text-decoration: underline;
+      }
+
+      @include media($xs) {
+         margin-top: 50px;
+         text-align: center;
+      }
+   }
+}

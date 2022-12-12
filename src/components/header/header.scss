@@ -1,12 +1,12 @@
 .header {
    background: $header-bg;
    color: $body;
-   height: 100vh;
+   min-height: 100vh;
    position: relative;
    display: flex;
 
    @include media($sm) {
-      height: 100vh;
+      min-height: 100vh;
    }
 
    @include media($xs) {
@@ -273,6 +273,7 @@
 
    .swipe {
       text-align: center;
+      margin-top: 15px;
    }
 
    &__icon {

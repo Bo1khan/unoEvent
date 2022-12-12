@@ -10,7 +10,8 @@ module.exports = (env, argv) => {
             jquery: 'jQuery',
         },
         entry: {
-            script: './src/index.js'
+            script: './src/index.js',
+            slick: './src/slick.min.js'
         },
         output: {
             filename: 'js/[name].js',

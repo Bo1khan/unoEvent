@@ -6,8 +6,10 @@ const sortCSSmq = require('sort-css-media-queries');
 module.exports = (env, argv) => {
     console.log(argv.mode);
     const config = {
+        externals: {
+            jquery: 'jQuery',
+        },
         entry: {
-            jquery: './src/jquery-3.6.0.min.js',
             script: './src/index.js'
         },
         output: {

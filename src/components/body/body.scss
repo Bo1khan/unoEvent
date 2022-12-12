@@ -169,10 +169,7 @@
          font-size: 16px;
          font-weight: 600;
          border: none;
-
-         &.active {
-            opacity: 0.9;
-         }
+         background: $body;
 
          .icon-showdown {
             margin-left: 10px;
@@ -193,6 +190,7 @@
          border: 1px solid #AAAAF9;
          border-radius: 30px;
          padding: 30px 35px 35px 40px;
+         transition: 0.5s;
 
          &__title {
             font-weight: 800;
@@ -208,6 +206,7 @@
             padding: 2px 23px;
             margin-bottom: 10px;
             background: $body;
+            transition: 0.5s;
          }
 
          &__desc {
@@ -239,6 +238,19 @@
          }
       }
 
+      .packet:hover {
+         background: $body;
+
+         .packet__price {
+            background: #AAAAF9;
+         }
+
+         .order__btn {
+            background: #AAAAF9;
+            color: $body;
+         }
+      }
+
       .decor,
       .services,
       .foods {
@@ -246,21 +258,28 @@
          margin-bottom: 32px;
       }
    }
-
-   .packet__icon {
-      display: inline-block;
-      padding: 3px;
-      background: #AAAAF9;
-      border-radius: 50%;
-   }
-
-   .more {
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 100%;
-      text-decoration: underline;
+   .packet__info {
+      display: flex;
       margin-top: 15px;
-      text-align: left;
+
+      .packet__icon {
+         width: 15px;
+         height: 15px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #AAAAF9;
+         border-radius: 50%;
+         margin: 0;
+      }
+   
+      .more {
+         font-weight: 700;
+         font-size: 13px;
+         line-height: 100%;
+         text-decoration: underline;
+         margin-left: 7px;
+      }
    }
 
    .order {
@@ -277,6 +296,7 @@
          background: $body;
          border: 1px solid rgba(0, 0, 0, 0.2);
          border-radius: 100px;
+         transition: 0.5s;
       }
 
       &__pdf {

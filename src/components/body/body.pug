@@ -46,13 +46,13 @@ main.main
                               -var links = [ 'Кулер с водой', 'Лед для напитков (5 литров)', 'Праздничный вынос вашего торта на тележке с горящими фонтанами' ]
                                  each val in links
                                     li= val
-                     span.icon-plus.packet__icon
-                     a.more(href="") Также включено
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
                      .order 
                         button.order__btn Забронировать
                         button.order__pdf 
                            img.order__icon(src=require("../../images/pdf.png"), alt="")
-
                   .packet 
                      h3.packet__title «Премиум»
                      p.packet__price 139 000 ₽
@@ -78,13 +78,13 @@ main.main
                               -var links = [ 'Кулер с водой', 'Лед для напитков (5 литров)', 'Лимонад-бар (6 литров)', 'Праздничный вынос вашего торта на тележке с горящими фонтанами' ]
                                  each val in links
                                     li= val
-                     span.icon-plus.packet__icon
-                     a.more(href="") Также включено
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
                      .order 
                         button.order__btn Забронировать
                         button.order__pdf 
                            img.order__icon(src=require("../../images/pdf.png"), alt="")
-
                   .packet 
                      h3.packet__title «Все включено»
                      p.packet__price 199 000 ₽
@@ -110,14 +110,14 @@ main.main
                               -var links = [ 'Кулер с водой', 'Лед для напитков (5 литров)', 'Лимонад-бар (8 литров)', 'Праздничный вынос вашего торта на тележке с горящими фонтанами' ]
                                  each val in links
                                     li= val
-                     span.icon-plus.packet__icon
-                     a.more(href="") Также включено
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
                      .order 
                         button.order__btn Забронировать
                         button.order__pdf 
                            img.order__icon(src=require("../../images/pdf.png"), alt="")
                   
-
          .card.second
             .card__wrapper
                .card__content 
@@ -139,7 +139,104 @@ main.main
                         span.icon-prev
                      button.next 
                         span.icon-next
-
+            .packets 
+                  .packet 
+                     h3.packet__title «Старт»
+                     p.packet__price 89 900 ₽
+                     p.packet__desc 5 часов аренды со всей
+                        br
+                        | мебелью и оборудованием
+                     .packet__content 
+                        .decor 
+                           h5.packet__subtitle Декор
+                           ul.packet__list 
+                              -var links = [ 'Аренда лофта со всей мебелью на 5 часов', 'Техническое оснащение лофта ', 'Караоке' ]
+                                 each val in links
+                                    li= val
+                        .services 
+                           h5.packet__subtitle Услуги и развлечения
+                           ul.packet__list
+                              -var links = [ 'Шоу-программа от ведущего (3 часа)', 'Ди-джей (4 часа)', 'Слайдшоу', 'Фотограф (2 часа)', 'Праздничный вынос торта на тележке с горящими фонтанами' ]
+                                 each val in links
+                                    li= val
+                        .foods 
+                           h5.packet__subtitle Еда/напитки
+                           ul.packet__list 
+                              -var links = [ 'Кулер с водой', 'Лед для напитков (5 литров)' ]
+                                 each val in links
+                                    li= val
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
+                     .order 
+                        button.order__btn Забронировать
+                        button.order__pdf 
+                           img.order__icon(src=require("../../images/pdf.png"), alt="")
+                  .packet 
+                     h3.packet__title «Премиум»
+                     p.packet__price 139 000 ₽
+                     p.packet__desc 5 часов аренды со всей
+                        br
+                        | мебелью и оборудованием
+                     .packet__content
+                        .decor 
+                           h5.packet__subtitle Декор
+                           ul.packet__list 
+                              -var links = [ 'Праздничное оформление столов и сцены', 'Воздушные шары', 'Фотозона (выпускной 2022)' ]
+                                 each val in links
+                                    li= val
+                        .services 
+                           h5.packet__subtitle Услуги и развлечения
+                           ul.packet__list
+                              -var links = [ 'Мультимедийная шоу программа от ведущего с реквизитом (4 часа)', 'Ди-джей (5 часов)', 'Караоке', 'Слайдшоу', 'Фотограф (2 часа)', 'Иллюзионист (20 минут)', 'Праздничный вынос торта на тележке с горящими фонтанами', 'Пиротехнические фонтаны (2 шт)', 'На выбор: Бумажное шоу / Кавер-исполнитель / Конфетти-дождь / Пирамида из бокалов шампанского (напитки отдельно)' ]
+                                 each val in links
+                                    li= val
+                        .foods 
+                           h5.packet__subtitle Еда/напитки
+                           ul.packet__list 
+                              -var links = [ 'Кулер с водой, одноразовые стаканы, чайные и кофейные пакетики', 'Лед для напитков 5 л.', 'Welcome drink - лимонад бар', 'Тематический торт (180-200 г на человека)' ]
+                                 each val in links
+                                    li= val
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
+                     .order 
+                        button.order__btn Забронировать
+                        button.order__pdf 
+                           img.order__icon(src=require("../../images/pdf.png"), alt="")
+                  .packet 
+                     h3.packet__title «Все включено»
+                     p.packet__price 199 000 ₽
+                     p.packet__desc 6 часов аренды со всей
+                        br
+                        | мебелью и оборудованием
+                     .packet__content
+                        .decor 
+                           h5.packet__subtitle Декор
+                           ul.packet__list 
+                              -var links = [ 'Праздничное оформление столов и сцены', 'Воздушные шары', 'Фотозона (выпускной 2023)' ]
+                                 each val in links
+                                    li= val
+                        .services 
+                           h5.packet__subtitle Услуги и развлечения
+                           ul.packet__list
+                              -var links = [ 'Мультимедийная шоу программа от ведущего с реквизитом (4 часа)', 'Ди-джей (5 часов)', 'Караоке', 'Слайдшоу', 'Фотограф (3 часа)', 'Видеооператор (3 часа)', 'Шоу на выбор (Бармен шоу / Выступление кавер-дуэта / Световое шоу/ Иллюзион Шоу)', 'Шоу на выбор (Ростовые куклы / Иллюзионист Welcome / Зеркальные люди Welcome)', 'Праздничный вынос торта на тележке с горящими фонтанами', 'Пиротехнические фонтаны (4 шт)' ]
+                                 each val in links
+                                    li= val
+                        .foods 
+                           h5.packet__subtitle Еда/напитки
+                           ul.packet__list 
+                              -var links = [ 'Кулер с водой, одноразовые стаканы, чайные и кофейные пакетики', 'Лед для напитков 5 л.', 'Лёгкий фуршет (фрукты, сладкое)', 'Welcome drink - лимонад бар', 'Горка шампанского (можно безалкогольное)', 'Тематический торт (180-200 г на человека)' ]
+                                 each val in links
+                                    li= val
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
+                     .order 
+                        button.order__btn Забронировать
+                        button.order__pdf 
+                           img.order__icon(src=require("../../images/pdf.png"), alt="")
+                  
          .card.third
             .card__wrapper
                .card__content 
@@ -162,7 +259,104 @@ main.main
                         span.icon-prev
                      button.next 
                         span.icon-next
-
+            .packets 
+                  .packet 
+                     h3.packet__title «Старт»
+                     p.packet__price 89 900 ₽
+                     p.packet__desc 5 часов аренды со всей
+                        br
+                        | мебелью и оборудованием
+                     .packet__content 
+                        .decor 
+                           h5.packet__subtitle Декор
+                           ul.packet__list 
+                              -var links = [ 'Новогоднее оформление столов и сцены', 'Праздничная ёлка (2 метра)', 'Новогодняя фотозона', 'Электронное пригласительное для гостей' ]
+                                 each val in links
+                                    li= val
+                        .services 
+                           h5.packet__subtitle Услуги и развлечения
+                           ul.packet__list
+                              -var links = [ 'Программа от ведущего (3 часа)', 'Ди-джей (5 часов)', 'Слайдшоу (видео из ваших фото/видео)', 'Фотограф (2 часа)', 'Караоке' ]
+                                 each val in links
+                                    li= val
+                        .foods 
+                           h5.packet__subtitle Еда/напитки
+                           ul.packet__list 
+                              -var links = [ 'Кулер с водой', 'Лед для напитков (5 литров)', 'Праздничный вынос вашего торта на тележке с горящими фонтанами' ]
+                                 each val in links
+                                    li= val
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
+                     .order 
+                        button.order__btn Забронировать
+                        button.order__pdf 
+                           img.order__icon(src=require("../../images/pdf.png"), alt="")
+                  .packet 
+                     h3.packet__title «Премиум»
+                     p.packet__price 139 000 ₽
+                     p.packet__desc 5 часов аренды со всей
+                        br
+                        | мебелью и оборудованием
+                     .packet__content
+                        .decor 
+                           h5.packet__subtitle Декор
+                           ul.packet__list 
+                              -var links = [ 'Новогоднее оформление столов и сцены', 'Праздничная ёлка (2 метра)', 'Новогодняя фотозона', 'Электронное пригласительное для гостей' ]
+                                 each val in links
+                                    li= val
+                        .services 
+                           h5.packet__subtitle Услуги и развлечения
+                           ul.packet__list
+                              -var links = [ 'Программа от ведущего (3 часа)', 'Ди-джей (5 часов)', 'Слайдшоу (видео из ваших фото/видео)', 'Фотограф (2 часа)', 'Welcome - Иллюзион или Саксофон  -  (20 - 30 минут)', 'Пиротехнические фонтаны (2 шт)', 'Бармен или официант (6 часов)', 'Помощь в создании корпоративного квиза' ]
+                                 each val in links
+                                    li= val
+                        .foods 
+                           h5.packet__subtitle Еда/напитки
+                           ul.packet__list 
+                              -var links = [ 'Кулер с водой', 'Лед для напитков (5 литров)', 'Лимонад-бар (6 литров)', 'Праздничный вынос вашего торта на тележке с горящими фонтанами' ]
+                                 each val in links
+                                    li= val
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
+                     .order 
+                        button.order__btn Забронировать
+                        button.order__pdf 
+                           img.order__icon(src=require("../../images/pdf.png"), alt="")
+                  .packet 
+                     h3.packet__title «Все включено»
+                     p.packet__price 199 000 ₽
+                     p.packet__desc 6 часов аренды со всей
+                        br
+                        | мебелью и оборудованием
+                     .packet__content
+                        .decor 
+                           h5.packet__subtitle Декор
+                           ul.packet__list 
+                              -var links = [ 'Новогоднее оформление столов и сцены', 'Праздничная ёлка (2 метра)', 'Новогодняя фотозона', 'Электронное пригласительное для гостей' ]
+                                 each val in links
+                                    li= val
+                        .services 
+                           h5.packet__subtitle Услуги и развлечения
+                           ul.packet__list
+                              -var links = [ 'Программа от ведущего (4 часа)', 'Ди-джей (6 часов)', 'Слайдшоу (видео из ваших фото/видео)', 'Фотограф (3 часа)', 'Видеооператор (3 часа)', 'Горка шампанского', 'Пиротехнические фонтаны (4 шт)', 'Бармен или официант (6 часов)', 'Welcome - Иллюзион / Саксофон', 'Помощь в создании корпоративного квиза' ]
+                                 each val in links
+                                    li= val
+                        .foods 
+                           h5.packet__subtitle Еда/напитки
+                           ul.packet__list 
+                              -var links = [ 'Кулер с водой', 'Лед для напитков (5 литров)', 'Лимонад-бар (8 литров)', 'Праздничный вынос вашего торта на тележке с горящими фонтанами' ]
+                                 each val in links
+                                    li= val
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
+                     .order 
+                        button.order__btn Забронировать
+                        button.order__pdf 
+                           img.order__icon(src=require("../../images/pdf.png"), alt="")
+                  
          .card.fourth
             .card__wrapper
                .card__content 
@@ -182,7 +376,104 @@ main.main
                         span.icon-prev
                      button.next 
                         span.icon-next
-
+            .packets 
+                  .packet 
+                     h3.packet__title «Старт»
+                     p.packet__price 89 900 ₽
+                     p.packet__desc 5 часов аренды со всей
+                        br
+                        | мебелью и оборудованием
+                     .packet__content 
+                        .decor 
+                           h5.packet__subtitle Декор
+                           ul.packet__list 
+                              -var links = [ 'Новогоднее оформление столов и сцены', 'Праздничная ёлка (2 метра)', 'Новогодняя фотозона', 'Электронное пригласительное для гостей' ]
+                                 each val in links
+                                    li= val
+                        .services 
+                           h5.packet__subtitle Услуги и развлечения
+                           ul.packet__list
+                              -var links = [ 'Программа от ведущего (3 часа)', 'Ди-джей (5 часов)', 'Слайдшоу (видео из ваших фото/видео)', 'Фотограф (2 часа)', 'Караоке' ]
+                                 each val in links
+                                    li= val
+                        .foods 
+                           h5.packet__subtitle Еда/напитки
+                           ul.packet__list 
+                              -var links = [ 'Кулер с водой', 'Лед для напитков (5 литров)', 'Праздничный вынос вашего торта на тележке с горящими фонтанами' ]
+                                 each val in links
+                                    li= val
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
+                     .order 
+                        button.order__btn Забронировать
+                        button.order__pdf 
+                           img.order__icon(src=require("../../images/pdf.png"), alt="")
+                  .packet 
+                     h3.packet__title «Премиум»
+                     p.packet__price 139 000 ₽
+                     p.packet__desc 5 часов аренды со всей
+                        br
+                        | мебелью и оборудованием
+                     .packet__content
+                        .decor 
+                           h5.packet__subtitle Декор
+                           ul.packet__list 
+                              -var links = [ 'Новогоднее оформление столов и сцены', 'Праздничная ёлка (2 метра)', 'Новогодняя фотозона', 'Электронное пригласительное для гостей' ]
+                                 each val in links
+                                    li= val
+                        .services 
+                           h5.packet__subtitle Услуги и развлечения
+                           ul.packet__list
+                              -var links = [ 'Программа от ведущего (3 часа)', 'Ди-джей (5 часов)', 'Слайдшоу (видео из ваших фото/видео)', 'Фотограф (2 часа)', 'Welcome - Иллюзион или Саксофон  -  (20 - 30 минут)', 'Пиротехнические фонтаны (2 шт)', 'Бармен или официант (6 часов)', 'Помощь в создании корпоративного квиза' ]
+                                 each val in links
+                                    li= val
+                        .foods 
+                           h5.packet__subtitle Еда/напитки
+                           ul.packet__list 
+                              -var links = [ 'Кулер с водой', 'Лед для напитков (5 литров)', 'Лимонад-бар (6 литров)', 'Праздничный вынос вашего торта на тележке с горящими фонтанами' ]
+                                 each val in links
+                                    li= val
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
+                     .order 
+                        button.order__btn Забронировать
+                        button.order__pdf 
+                           img.order__icon(src=require("../../images/pdf.png"), alt="")
+                  .packet 
+                     h3.packet__title «Все включено»
+                     p.packet__price 199 000 ₽
+                     p.packet__desc 6 часов аренды со всей
+                        br
+                        | мебелью и оборудованием
+                     .packet__content
+                        .decor 
+                           h5.packet__subtitle Декор
+                           ul.packet__list 
+                              -var links = [ 'Новогоднее оформление столов и сцены', 'Праздничная ёлка (2 метра)', 'Новогодняя фотозона', 'Электронное пригласительное для гостей' ]
+                                 each val in links
+                                    li= val
+                        .services 
+                           h5.packet__subtitle Услуги и развлечения
+                           ul.packet__list
+                              -var links = [ 'Программа от ведущего (4 часа)', 'Ди-джей (6 часов)', 'Слайдшоу (видео из ваших фото/видео)', 'Фотограф (3 часа)', 'Видеооператор (3 часа)', 'Горка шампанского', 'Пиротехнические фонтаны (4 шт)', 'Бармен или официант (6 часов)', 'Welcome - Иллюзион / Саксофон', 'Помощь в создании корпоративного квиза' ]
+                                 each val in links
+                                    li= val
+                        .foods 
+                           h5.packet__subtitle Еда/напитки
+                           ul.packet__list 
+                              -var links = [ 'Кулер с водой', 'Лед для напитков (5 литров)', 'Лимонад-бар (8 литров)', 'Праздничный вынос вашего торта на тележке с горящими фонтанами' ]
+                                 each val in links
+                                    li= val
+                     .packet__info
+                        span.icon-plus.packet__icon
+                        a.more(href="") Также включено
+                     .order 
+                        button.order__btn Забронировать
+                        button.order__pdf 
+                           img.order__icon(src=require("../../images/pdf.png"), alt="")
+                  
    h4.main__title 
       | услуги кейтеринга
       br

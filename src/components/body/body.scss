@@ -390,9 +390,7 @@
 
    .slider {
       position: relative;
-
-      &__inner {
-         max-width: 638px;
+      max-width: 638px;
          width: 100%;
          overflow: hidden;
          position: relative;
@@ -401,8 +399,12 @@
             max-width: 500px;
          }
 
+         @include media($md) {
+            max-width: 600px;
+         }
+
          @include media($sm) {
-            width: auto;
+            max-width: 430px;
          }
 
          .slick-arrow {
@@ -452,7 +454,6 @@
                }
             }
          }
-      }
 
       &__img {
          max-width: 638px;
@@ -463,6 +464,14 @@
 
          @include media(1300px) {
             max-width: 500px;
+         }
+
+         @include media($md) {
+            max-width: 600px;
+         }
+
+         @include media($sm) {
+            max-width: 430px;
          }
 
          @include media($xs) {

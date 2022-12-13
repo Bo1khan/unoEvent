@@ -20,7 +20,7 @@ $('.packet__info').on('click', function (e) {
    $(this).next('.info').slideToggle();
 })
 
-$('.slider__inner').slick({
+$('.slider').slick({
    dots: true,
 
 });

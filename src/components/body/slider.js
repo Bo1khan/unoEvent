@@ -1,3 +1,5 @@
+import 'slick-carousel';
+
 $('.packets').slideUp();
 $('.info').slideUp();
 
@@ -17,3 +19,10 @@ $('.packet__info').on('click', function (e) {
    e.preventDefault();
    $(this).next('.info').slideToggle();
 })
+
+$('.slider__inner').slick({
+   dots: true,
+
+});
+$('.slick-prev').html('<span class="icon-prev"></span>');
+$('.slick-next').html('<span class="icon-next"></span>');

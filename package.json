@@ -30,6 +30,7 @@
     "html-webpack-plugin": "^5.5.0",
     "postcss-preset-env": "^7.8.0",
     "pug-loader": "^2.4.0",
-    "sort-css-media-queries": "^2.0.4"
+    "sort-css-media-queries": "^2.0.4",
+    "slick-carousel": "1.6.0"
   }
 }

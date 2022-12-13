@@ -1,4 +1,4 @@
-$bg: 1340px;
+$big: 1340px;
 $lg: 1140px;
 $md: 992px;
 $sm: 768px;
@@ -12,7 +12,7 @@ $gutter: 15px;
 }
 
 @mixin container($padding: $gutter) {
-    max-width: $bg;
+    max-width: $big;
     width: 100%;
     margin-left: auto;
     margin-right: auto;

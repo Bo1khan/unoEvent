@@ -22,7 +22,7 @@ $('.packet__info').on('click', function (e) {
 
 $('.slider').slick({
    dots: true,
-
 });
+
 $('.slick-prev').html('<span class="icon-prev"></span>');
 $('.slick-next').html('<span class="icon-next"></span>');

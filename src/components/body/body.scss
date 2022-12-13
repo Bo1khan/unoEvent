@@ -94,6 +94,7 @@
 
       @include media($xs) {
          width: 100%;
+         padding: 25px 19px;
       }
 
       &__wrapper {
@@ -185,31 +186,45 @@
       }
 
       .packets {
-         width: 100%;
-         padding: 42px 0 10px;
-         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-         gap: 25px;
-         overflow-x: auto;
+         margin-top: 40px;
+         overflow: hidden;
 
-         @include media($lg) {
-            grid-template-columns: repeat(3, 360px);
-         }
+         .slick-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-         @include media($xs) {
-            grid-template-columns: repeat(3, 310px);
-         }
+            & button {
+               width: 8px;
+               height: 8px;
+               font-size: 0;
+               background: none;
+               border: 1px solid $bg;
+               border-radius: 50%;
+               margin: 0 4px;
+            }
 
-         @include media(410px) {
-            grid-template-columns: repeat(3, 100%);
+            & li.slick-active {
+               border: none;
+
+               button {
+                  background: $bg;
+               }
+            }
          }
       }
 
-      .packets::-webkit-scrollbar {
-         display: none;
+      .packet__item {
+         margin-left: 20px;
+
+         &:first-of-type {
+            margin-left: 0;
+         }
       }
 
       .packet {
+         max-width: 400px;
+         width: 100%;
          background: $packet-bg;
          border: 1px solid $bg;
          border-radius: 30px;
@@ -221,12 +236,12 @@
          position: relative;
 
          @include media(1300px) {
-            padding: 25px 30px 30px 35px;
+            padding: 20px 25px 25px 30px;
             min-height: 680px;
          }
 
          @include media($xs) {
-            padding: 24px 24px 30px 28px;
+            max-width: 300px;
          }
 
          &__title {
@@ -236,10 +251,6 @@
             margin-bottom: 10px;
 
             @include media(1300px) {
-               font-size: 30px;
-            }
-
-            @include media($xs) {
                font-size: 27px;
             }
          }
@@ -257,7 +268,7 @@
             transition: 0.5s;
 
             @include media(1300px) {
-               font-size: 22px;
+               font-size: 20px;
             }
 
             @include media($md) {
@@ -271,7 +282,7 @@
             margin-bottom: 15px;
 
             @include media(1300px) {
-               font-size: 18px;
+               font-size: 16px;
             }
          }
 

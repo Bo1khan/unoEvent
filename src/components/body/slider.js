@@ -32,17 +32,9 @@ $(document).ready(function () {
    $('.packets').slick({
       dots: true,
       arrows: false,
-      slidesToShow: 3,
-      responsive: [
-         {
-            breakpoint: 1300,
-            settings: {
-               slidesToShow: 1,
-               variableWidth: true,
-               infinite: false
-            }
-         }
-      ]
+      slidesToShow: 1,
+      variableWidth: true,
+      infinite: false
    });
 
 });

@@ -309,11 +309,12 @@
                max-width: 250px;
                width: 100%;
                position: absolute;
-               bottom: 125px;
+               bottom: 130px;
+               left: 5%;
                margin-top: 10px;
                background: $body;
                padding: 15px;
-               border: 1px solid #000;
+               border: 1px solid $bg;
                border-radius: 20px;
             }
          }

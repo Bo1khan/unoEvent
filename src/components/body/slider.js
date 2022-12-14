@@ -20,7 +20,13 @@ $(document).ready(function () {
    $('.packet__info').on('click', function (e) {
       e.preventDefault();
       $(this).next('.info').slideToggle();
-   })
+   });
+
+   $('.more').hover( function() {
+      $(this).closest('.packet__info').next('.info').slideDown();
+   }, function() {
+      $(this).closest('.packet__info').next('.info').slideUp();
+   });
 
    $('.slider').slick({
       dots: true,

@@ -92,6 +92,17 @@ button {
         color: $body;
     }
 
+    &-close::before {
+        content: '\f00d';
+        font-size: 20px;
+        font-weight: 400;
+        color: $color;
+
+        @include media($md) {
+            font-size: 16px;
+        }
+    }
+
     &-vk::before {
         content: '\f189';
         font-size: 24px;

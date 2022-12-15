@@ -1,0 +1,18 @@
+.modal 
+   .modal__dialog 
+      .modal__content 
+         form(action="") 
+            button.modal__close(data-close) 
+               span.icon-close 
+            .modal__title Оставьте свой номер,
+               br
+               | и мы свяжемся с вами 
+               br
+               | в ближайшее время!
+            input.modal__input(required type="text" placeholder="Ваше имя*" name="name")
+            input.modal__input(required type="phone" placeholder="Телефон*" name="phone")
+            button.modal__btn Забронировать
+            p.modal__info Отправляя форму, вы даете свое согласие 
+               br
+               | на 
+               span обработку персональных данных
